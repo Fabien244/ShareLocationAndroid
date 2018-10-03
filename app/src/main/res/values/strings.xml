@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShareLocation</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="distance_between">Расстояние между вами: %1$d м.</string>
+    <string name="share_code">Поделиться местоположением</string>
+    <string name="enter_code">Ввести код</string>
+    <string name="settings">Настройка</string>
+    <string name="action">Действия</string>
+    <string name="share_code_title">Поделитесь этим кодом</string>
+    <string name="generate_new_code">Сгенерировать новый код</string>
+    <string name="enter_code_here">Введите код сюда</string>
+    <string name="enter_code_btn">Проверить</string>
+    <string name="share_code_incorrect">Данного кода не существует или у него истёк срок действия</string>
+    <string name="code">Код</string>
+    <string name="available">Активен</string>
+    <string name="not_available">Не активен</string>
+    <string name="offline">Не в сети</string>
+    <string name="online">В сети</string>
+    <string name="dont_my_code">Невозможно отслеживать самого себя</string>
+    <string name="list_codes">Список отслеживаний</string>
+</resources>

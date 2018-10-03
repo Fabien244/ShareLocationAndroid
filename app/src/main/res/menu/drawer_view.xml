@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:title="@string/action">
+        <item
+            android:id="@+id/nav_share_code"
+            android:icon="?attr/actionModeShareDrawable"
+            android:title="@string/share_code" />
+        <item
+            android:id="@+id/nav_enter_code"
+            android:icon="?attr/editTextBackground"
+            android:title="@string/enter_code" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/settings" />
+    </group>
+</menu>
