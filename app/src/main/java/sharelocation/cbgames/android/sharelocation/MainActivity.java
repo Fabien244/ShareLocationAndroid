@@ -63,13 +63,9 @@ public class MainActivity extends AppCompatActivity {
             Manifest.permission.ACCESS_COARSE_LOCATION,
     };
     private static final int REQUEST_LOCATION_PERMISSIONS = 0;
-    public static final String EXTRA_LOC_LATITUDE = "com.bignerdranch.android.criminalintent.mylatitude";
-    public static final String EXTRA_LOC_LONGTITUDE = "com.bignerdranch.android.criminalintent.mylongtitude";
-    private GoogleMap mMap;
     private GoogleApiClient mClient;
     private Location mLocation;
 
-    private Button mDistanceButton;
     private DrawerLayout mDrawerLayout;
 
     boolean mStopHandler = false;
@@ -177,14 +173,6 @@ public class MainActivity extends AppCompatActivity {
     public void sendLocation(Location location){
         MyInformation.get(this).getUser(0).setLocation(location);
         new LocationRequestTask(location).execute();
-    }
-
-    public void setDistance(int distance) {
-        //Fragment frag1 = getFragmentManager().findFragmentById(R.id.fragment1);
-        //((TextView)frag1.getView().findViewById(R.id.textView)).setText("Text from Fragment 2:" + s);
-        //mDistanceButton = (Button)this.findViewById(R.id.distance);
-        Resources res = getResources();
-        mDistanceButton.setText(String.format(res.getString(R.string.distance_between), distance));
     }
 
     private void findLocation() {
