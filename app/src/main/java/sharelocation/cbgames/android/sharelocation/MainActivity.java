@@ -1,14 +1,17 @@
 package sharelocation.cbgames.android.sharelocation;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
+    @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
 
-
+        //locationManager.requestLocationUpdates(provider, t, distance, pendingIntent);
         mClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .build();
-
+        //MyInformation.get(getBaseContext()).getUser(0).setLocation(LocationServices.FusedLocationApi.getLastLocation(mClient));
         mHandler = new Handler();
         mHandler.post(runnable);
     }
@@ -177,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void findLocation() {
         LocationRequest request = LocationRequest.create();
-        request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        request.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
         request.setInterval(5000);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -194,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
             }
             return;
         }
+
+
         LocationServices.FusedLocationApi
                 .requestLocationUpdates(mClient, request, new LocationListener() {
                     @Override
@@ -225,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-        mClient.disconnect();
+        //mClient.disconnect();
     }
 
 
