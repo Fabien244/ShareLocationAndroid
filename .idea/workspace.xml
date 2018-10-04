@@ -10,25 +10,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="removing useless variables">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_small.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SplashActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,21 +38,21 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
-              <caret line="283" column="4" lean-forward="true" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+              <caret line="283" column="0" lean-forward="true" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
               <folding>
                 <element signature="e#8625#8940#0" expanded="true" />
                 <element signature="e#8939#8940#0" expanded="true" />
                 <element signature="e#10024#10365#0" expanded="true" />
                 <element signature="e#10364#10365#0" expanded="true" />
                 <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#12172#12173#0" expanded="true" />
-                <element signature="e#12216#12217#0" expanded="true" />
+                <element signature="e#12168#12169#0" expanded="true" />
+                <element signature="e#12212#12213#0" expanded="true" />
                 <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#13880#13881#0" expanded="true" />
-                <element signature="e#13924#13925#0" expanded="true" />
+                <element signature="e#13876#13877#0" expanded="true" />
+                <element signature="e#13920#13921#0" expanded="true" />
                 <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#15543#15544#0" expanded="true" />
-                <element signature="e#15587#15588#0" expanded="true" />
+                <element signature="e#15539#15540#0" expanded="true" />
+                <element signature="e#15583#15584#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2518,7 +2501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538573785445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="добавлен сервис, постоянной отправки геопозиции пользователя">
+      <created>1538646845827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538646845827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2562,7 +2552,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removing useless variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing useless variables" />
+    <MESSAGE value="добавлен сервис, постоянной отправки геопозиции пользователя" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен сервис, постоянной отправки геопозиции пользователя" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2581,14 +2572,14 @@
             <element signature="e#10024#10365#0" expanded="true" />
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#12172#12173#0" expanded="true" />
-            <element signature="e#12216#12217#0" expanded="true" />
+            <element signature="e#12168#12169#0" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13880#13881#0" expanded="true" />
-            <element signature="e#13924#13925#0" expanded="true" />
+            <element signature="e#13876#13877#0" expanded="true" />
+            <element signature="e#13920#13921#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15543#15544#0" expanded="true" />
-            <element signature="e#15587#15588#0" expanded="true" />
+            <element signature="e#15539#15540#0" expanded="true" />
+            <element signature="e#15583#15584#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2782,21 +2773,21 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="283" column="4" lean-forward="true" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+          <caret line="283" column="0" lean-forward="true" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
           <folding>
             <element signature="e#8625#8940#0" expanded="true" />
             <element signature="e#8939#8940#0" expanded="true" />
             <element signature="e#10024#10365#0" expanded="true" />
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#12172#12173#0" expanded="true" />
-            <element signature="e#12216#12217#0" expanded="true" />
+            <element signature="e#12168#12169#0" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13880#13881#0" expanded="true" />
-            <element signature="e#13924#13925#0" expanded="true" />
+            <element signature="e#13876#13877#0" expanded="true" />
+            <element signature="e#13920#13921#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15543#15544#0" expanded="true" />
-            <element signature="e#15587#15588#0" expanded="true" />
+            <element signature="e#15539#15540#0" expanded="true" />
+            <element signature="e#15583#15584#0" expanded="true" />
           </folding>
         </state>
       </provider>
