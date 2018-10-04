@@ -59,6 +59,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static String FILE_NAME = "filename";
     private static final int REQUEST_ERROR = 0;
     private static final String TAG = "MainActivity";
     private static final String[] LOCATION_PERMISSIONS = new String[]{
@@ -145,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //locationManager.requestLocationUpdates(provider, t, distance, pendingIntent);
+
         mClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
@@ -159,10 +161,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .build();
+
         //MyInformation.get(getBaseContext()).getUser(0).setLocation(LocationServices.FusedLocationApi.getLastLocation(mClient));
+
+        //Intent i = SendLocationService.newIntent(this);
+        //this.startService(i);
+        boolean shouldStartAlarm = !SendLocationService.isServiceAlarmOn
+                (this);
+        SendLocationService.setServiceAlarm(this, true);
+
+
         mHandler = new Handler();
         mHandler.post(runnable);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -255,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     public void onBackPressed() {
 
@@ -267,8 +280,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             getFragmentManager().popBackStack();
         }
-
     }
+
 
     private double meterDistanceBetweenPoints(double lat_a, double lng_a, double lat_b, double lng_b) {
         double pk = (double) (180.f/Math.PI);

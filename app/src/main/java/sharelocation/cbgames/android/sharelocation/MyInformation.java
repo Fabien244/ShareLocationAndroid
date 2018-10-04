@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 class MyInformation {
     private static MyInformation sMyInformation;
-
     private ArrayList<InformationUser> mUsers;
 
 

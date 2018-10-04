@@ -18,4 +18,5 @@
     <string name="online">В сети</string>
     <string name="dont_my_code">Невозможно отслеживать самого себя</string>
     <string name="list_codes">Список отслеживаний</string>
+    <string name="checked_location">Идет отслеживание местоположения</string>
 </resources>

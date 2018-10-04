@@ -3,6 +3,7 @@ package sharelocation.cbgames.android.sharelocation;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceActivity;
 import android.provider.Settings;
@@ -39,6 +40,7 @@ public class SplashActivity extends AppCompatActivity  {
     private class AuthTask extends AsyncTask<String, String, String> {
 
         private static final String TAG = "AsyncTask";
+        final String AUTH_HASH_CODE = "MyInformation";
 
         protected String doInBackground(String... urls) {
             try {
@@ -76,6 +78,12 @@ public class SplashActivity extends AppCompatActivity  {
                         MyInformation.get(getBaseContext()).getUser(0).setAuthHash(jsonResult.getString("hash"));
                         MyInformation.get(getBaseContext()).getUser(0).setUserName(jsonResult.getString("username"));
                         MyInformation.get(getBaseContext()).getUser(0).setCode(jsonResult.getString("sharecode"));
+
+                        SharedPreferences sPref = getSharedPreferences(AUTH_HASH_CODE, MODE_PRIVATE);
+                        SharedPreferences.Editor ed = sPref.edit();
+                        ed.putString("hash", jsonResult.getString("hash"));
+                        ed.commit();
+
                         Log.d(TAG, "Login Successful!");
                         openPage();
                     } else {
