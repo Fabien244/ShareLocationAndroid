@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android" >
     <group android:title="@string/action">
+
+        <item android:id="@+id/checked_location_item"
+              android:icon="?attr/actionModeShareDrawable"
+              android:title="@string/enable_send_location"
+              app:actionLayout="@layout/menu_switch"/>
+
         <item
             android:id="@+id/nav_share_code"
             android:icon="?attr/actionModeShareDrawable"
@@ -12,6 +19,7 @@
         <item
             android:id="@+id/nav_settings"
             android:icon="@android:drawable/ic_menu_manage"
-            android:title="@string/settings" />
+            android:title="@string/settings" >
+        </item>
     </group>
 </menu>

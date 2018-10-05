@@ -4,6 +4,8 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,6 +21,8 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -29,6 +33,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RemoteViews;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -57,6 +64,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
+import static android.app.Notification.EXTRA_NOTIFICATION_ID;
+
 public class MainActivity extends AppCompatActivity {
 
     public final static String FILE_NAME = "filename";
@@ -69,11 +78,14 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_LOCATION_PERMISSIONS = 0;
     private GoogleApiClient mClient;
     private Location mLocation;
+    private boolean isCheckedLocation = false;
 
     private DrawerLayout mDrawerLayout;
 
     boolean mStopHandler = false;
     Handler mHandler;
+
+    private Switch checkedLocationSwitch;
 
     Runnable runnable = new Runnable() {
         @Override
@@ -106,6 +118,15 @@ public class MainActivity extends AppCompatActivity {
         TextView navUsername = (TextView) headerView.findViewById(R.id.username_text);
         navUsername.setText(MyInformation.get(this).getUser(0).getUserName());
 
+        checkedLocationSwitch = (Switch) navigationView.getMenu().getItem(0).getActionView().findViewById(R.id.checked_location);
+        checkedLocationSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkedLocation(true);
+            }
+        });
+        checkedLocation(false);
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -113,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
                         int id = menuItem.getItemId();
                         android.support.v4.app.FragmentTransaction tran = getSupportFragmentManager().beginTransaction();
                         switch (id){
+                            case R.id.checked_location_item:
+                                checkedLocation(true);
+                                break;
                             case R.id.nav_share_code:
                                 tran.replace(R.id.fragment_container, new ShareFragment());
                                 tran.commit();
@@ -145,34 +169,22 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
 
-        //locationManager.requestLocationUpdates(provider, t, distance, pendingIntent);
-
-        mClient = new GoogleApiClient.Builder(this)
-                .addApi(LocationServices.API)
-                .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
-                    @Override
-                    public void onConnected(Bundle bundle) {
-                        Log.d(TAG, "GoogleApi connected");
-                        findLocation();
-                    }
-
-                    @Override
-                    public void onConnectionSuspended(int i) {
-                    }
-                })
-                .build();
-
-        //MyInformation.get(getBaseContext()).getUser(0).setLocation(LocationServices.FusedLocationApi.getLastLocation(mClient));
-
-        //Intent i = SendLocationService.newIntent(this);
-        //this.startService(i);
-        boolean shouldStartAlarm = !SendLocationService.isServiceAlarmOn
-                (this);
-        SendLocationService.setServiceAlarm(this, true);
-
 
         mHandler = new Handler();
         mHandler.post(runnable);
+    }
+
+
+    private void checkedLocation(boolean isChange){
+        if(checkedLocationSwitch != null) {
+            if(isChange)
+                isCheckedLocation = !QueryPreferences.isCheckLocation(this);
+            else
+                isCheckedLocation = QueryPreferences.isCheckLocation(this);
+            if(!SendLocationService.isServiceAlarmOn(this) || !isCheckedLocation)
+                SendLocationService.setServiceAlarm(getBaseContext(), isCheckedLocation);
+            checkedLocationSwitch.setChecked(isCheckedLocation);
+        }
     }
 
 
@@ -238,8 +250,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        mClient.connect();
+        checkedLocation(false);
     }
+
     @Override
     public void onStop() {
         super.onStop();
@@ -250,21 +263,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        GoogleApiAvailability apiAvailability = GoogleApiAvailability.
-                getInstance();
-        int errorCode = apiAvailability.isGooglePlayServicesAvailable(this);
-        if (errorCode != ConnectionResult.SUCCESS) {
-            Dialog errorDialog = apiAvailability
-                    .getErrorDialog(this, errorCode, REQUEST_ERROR,
-                            new DialogInterface.OnCancelListener() {
-                                @Override
-                                public void onCancel(DialogInterface dialog) {
-                                    // Выйти, если сервис недоступен.
-                                    finish();
-                                }
-                            });
-            errorDialog.show();
-        }
+        checkedLocation(false);
     }
 
 

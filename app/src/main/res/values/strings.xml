@@ -19,4 +19,6 @@
     <string name="dont_my_code">Невозможно отслеживать самого себя</string>
     <string name="list_codes">Список отслеживаний</string>
     <string name="checked_location">Идет отслеживание местоположения</string>
+    <string name="enable_send_location">Отслеживать местоположение</string>
+    <string name="stop">Приостановить отслеживание</string>
 </resources>
