@@ -10,25 +10,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="добавлен сервис, постоянной отправки геопозиции пользователя">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_switch.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,8 +96,8 @@
       <file leaf-file-name="QueryPreferences.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="391">
+              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2197,10 +2180,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" />
       </list>
     </option>
   </component>
@@ -2542,7 +2525,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538646883728</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1538725852273</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1538725852273</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1538726506501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538726506501</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2558,8 +2555,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2587,7 +2584,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removing useless variables" />
     <MESSAGE value="добавлен сервис, постоянной отправки геопозиции пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлен сервис, постоянной отправки геопозиции пользователя" />
+    <MESSAGE value="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3159,8 +3157,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="391">
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
