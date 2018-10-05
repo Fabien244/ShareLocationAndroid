@@ -176,13 +176,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void checkedLocation(boolean isChange){
-        if(checkedLocationSwitch != null) {
-            if(isChange)
+        if (checkedLocationSwitch != null) {
+            if (isChange)
                 isCheckedLocation = !QueryPreferences.isCheckLocation(this);
             else
                 isCheckedLocation = QueryPreferences.isCheckLocation(this);
-            if(!SendLocationService.isServiceAlarmOn(this) || !isCheckedLocation)
-                SendLocationService.setServiceAlarm(getBaseContext(), isCheckedLocation);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    requestPermissions(LOCATION_PERMISSIONS,
+                            REQUEST_LOCATION_PERMISSIONS);
+                }
+            }else {
+                if (!SendLocationService.isServiceAlarmOn(this) || !isCheckedLocation)
+                    SendLocationService.setServiceAlarm(getBaseContext(), isCheckedLocation);
+            }
             checkedLocationSwitch.setChecked(isCheckedLocation);
         }
     }
@@ -240,7 +247,8 @@ public class MainActivity extends AppCompatActivity {
                                            int[] grantResults) {
         switch (requestCode) {
             case REQUEST_LOCATION_PERMISSIONS:
-                findLocation();
+                //findLocation();
+                checkedLocation(true);
             default:
                 super.onRequestPermissionsResult(requestCode, permissions,
                         grantResults);

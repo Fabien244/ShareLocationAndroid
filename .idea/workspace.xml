@@ -6,12 +6,24 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="SendLocationService" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,26 +49,18 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="183" column="61" lean-forward="false" selection-start-line="183" selection-start-column="61" selection-end-line="183" selection-end-column="61" />
+            <state relative-caret-position="2125">
+              <caret line="191" column="13" lean-forward="false" selection-start-line="191" selection-start-column="13" selection-end-line="191" selection-end-column="13" />
               <folding>
-                <element signature="e#3264#3535#0" expanded="true" />
-                <element signature="e#3534#3535#0" expanded="true" />
-                <element signature="e#4526#4684#0" expanded="true" />
-                <element signature="e#4683#4684#0" expanded="true" />
-                <element signature="e#4794#6372#0" expanded="true" />
-                <element signature="e#6371#6372#0" expanded="true" />
-                <element signature="e#9114#9429#0" expanded="true" />
-                <element signature="e#9428#9429#0" expanded="true" />
                 <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#11932#11933#0" expanded="true" />
-                <element signature="e#11976#11977#0" expanded="true" />
+                <element signature="e#12490#12491#0" expanded="true" />
+                <element signature="e#12534#12535#0" expanded="true" />
                 <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#13640#13641#0" expanded="true" />
-                <element signature="e#13684#13685#0" expanded="true" />
+                <element signature="e#14198#14199#0" expanded="true" />
+                <element signature="e#14242#14243#0" expanded="true" />
                 <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#15303#15304#0" expanded="true" />
-                <element signature="e#15347#15348#0" expanded="true" />
+                <element signature="e#15861#15862#0" expanded="true" />
+                <element signature="e#15905#15906#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,39 +68,37 @@
       </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="36" column="70" lean-forward="false" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-manifest">
             <state />
           </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendLocationService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SendLocationService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="77" column="41" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="41" />
+            <state relative-caret-position="391">
+              <caret line="197" column="44" lean-forward="false" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
               <folding>
-                <element signature="e#2417#2418#0" expanded="true" />
-                <element signature="e#2449#2450#0" expanded="true" />
-                <element signature="e#6456#6492#0" expanded="true" />
-                <element signature="e#6970#7002#0" expanded="true" />
-                <element signature="e#7985#7986#0" expanded="true" />
-                <element signature="e#8012#8013#0" expanded="true" />
+                <element signature="e#2486#2487#0" expanded="true" />
+                <element signature="e#2518#2519#0" expanded="true" />
+                <element signature="e#9759#9760#0" expanded="true" />
+                <element signature="e#9786#9787#0" expanded="true" />
                 <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryPreferences.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QueryPreferences.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="374">
               <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -108,7 +110,7 @@
       <file leaf-file-name="ShareReceiver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="323">
               <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,6 +147,9 @@
       <find>setServiceAlarm</find>
       <find>isCheckedLocation</find>
       <find>MyInformation</find>
+      <find>requestPermissions</find>
+      <find>request</find>
+      <find>requestp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2178,12 +2183,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_switch.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
       </list>
     </option>
   </component>
@@ -2211,8 +2216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2247,15 +2250,16 @@
         </subPane>
       </pane>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="ce11160ba089cd1105" />
+    <property name="device.picker.selection" value="ce011711988cee2f02" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
   </component>
@@ -2567,24 +2571,30 @@
       <option name="project" value="LOCAL" />
       <updated>1538727607999</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1538727828118</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1538727828118</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2602,6 +2612,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2626,12 +2637,10 @@
         <state relative-caret-position="1615">
           <caret line="143" column="26" lean-forward="false" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
           <folding>
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#6456#6492#0" expanded="true" />
-            <element signature="e#6970#7002#0" expanded="true" />
-            <element signature="e#7985#7986#0" expanded="true" />
-            <element signature="e#8012#8013#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#9759#9760#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
             <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
           </folding>
         </state>
@@ -2642,23 +2651,15 @@
         <state relative-caret-position="2278">
           <caret line="189" column="48" lean-forward="false" selection-start-line="189" selection-start-column="48" selection-end-line="190" selection-end-column="65" />
           <folding>
-            <element signature="e#3264#3535#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#4526#4684#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4794#6372#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#9114#9429#0" expanded="true" />
-            <element signature="e#9428#9429#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11932#11933#0" expanded="true" />
-            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13684#13685#0" expanded="true" />
+            <element signature="e#14198#14199#0" expanded="true" />
+            <element signature="e#14242#14243#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2667,9 +2668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="class#AuthTask#0;class#SplashActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2677,7 +2675,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2688,7 +2685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2697,12 +2693,10 @@
         <state relative-caret-position="2040">
           <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
           <folding>
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#6456#6492#0" expanded="true" />
-            <element signature="e#6970#7002#0" expanded="true" />
-            <element signature="e#7985#7986#0" expanded="true" />
-            <element signature="e#8012#8013#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#9759#9760#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
             <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
           </folding>
         </state>
@@ -2713,23 +2707,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3264#3535#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#4526#4684#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4794#6372#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#9114#9429#0" expanded="true" />
-            <element signature="e#9428#9429#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11932#11933#0" expanded="true" />
-            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13684#13685#0" expanded="true" />
+            <element signature="e#14198#14199#0" expanded="true" />
+            <element signature="e#14242#14243#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2738,9 +2724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="class#AuthTask#0;class#SplashActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2748,7 +2731,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2759,7 +2741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2768,12 +2749,10 @@
         <state relative-caret-position="765">
           <caret line="82" column="63" lean-forward="false" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
           <folding>
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#6456#6492#0" expanded="true" />
-            <element signature="e#6970#7002#0" expanded="true" />
-            <element signature="e#7985#7986#0" expanded="true" />
-            <element signature="e#8012#8013#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#9759#9760#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
             <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
           </folding>
         </state>
@@ -2784,23 +2763,15 @@
         <state relative-caret-position="3536">
           <caret line="263" column="16" lean-forward="false" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
           <folding>
-            <element signature="e#3264#3535#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#4526#4684#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4794#6372#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#9114#9429#0" expanded="true" />
-            <element signature="e#9428#9429#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11932#11933#0" expanded="true" />
-            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13684#13685#0" expanded="true" />
+            <element signature="e#14198#14199#0" expanded="true" />
+            <element signature="e#14242#14243#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2809,9 +2780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="class#AuthTask#0;class#SplashActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2819,7 +2787,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2830,7 +2797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2839,12 +2805,10 @@
         <state relative-caret-position="765">
           <caret line="82" column="63" lean-forward="false" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
           <folding>
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#6456#6492#0" expanded="true" />
-            <element signature="e#6970#7002#0" expanded="true" />
-            <element signature="e#7985#7986#0" expanded="true" />
-            <element signature="e#8012#8013#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#9759#9760#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
             <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
           </folding>
         </state>
@@ -2855,23 +2819,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3264#3535#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#4526#4684#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4794#6372#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#9114#9429#0" expanded="true" />
-            <element signature="e#9428#9429#0" expanded="true" />
             <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11932#11933#0" expanded="true" />
-            <element signature="e#11976#11977#0" expanded="true" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
             <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13684#13685#0" expanded="true" />
+            <element signature="e#14198#14199#0" expanded="true" />
+            <element signature="e#14242#14243#0" expanded="true" />
             <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2880,12 +2836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#1548#1549#0" expanded="false" />
-            <element signature="e#1588#1589#0" expanded="false" />
-            <element signature="e#1640#1641#0" expanded="false" />
-            <element signature="e#1684#1685#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2893,7 +2843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2939,12 +2888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding>
-            <element signature="e#1548#1549#0" expanded="false" />
-            <element signature="e#1588#1589#0" expanded="false" />
-            <element signature="e#1640#1641#0" expanded="false" />
-            <element signature="e#1684#1685#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2952,9 +2895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="class#AuthTask#0;class#SplashActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2962,7 +2902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2970,7 +2909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2978,7 +2916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2989,7 +2926,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3000,7 +2936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3011,7 +2946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3022,7 +2956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3033,7 +2966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3044,7 +2976,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3055,7 +2986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3066,7 +2996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3074,9 +3003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-          <folding>
-            <element signature="e#349#379#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3090,24 +3016,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="70" lean-forward="false" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/notification_large.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="e#482#508#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3118,13 +3030,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
           <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="323">
           <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3136,58 +3047,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="183" column="61" lean-forward="false" selection-start-line="183" selection-start-column="61" selection-end-line="183" selection-end-column="61" />
-          <folding>
-            <element signature="e#3264#3535#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#4526#4684#0" expanded="true" />
-            <element signature="e#4683#4684#0" expanded="true" />
-            <element signature="e#4794#6372#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#9114#9429#0" expanded="true" />
-            <element signature="e#9428#9429#0" expanded="true" />
-            <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11932#11933#0" expanded="true" />
-            <element signature="e#11976#11977#0" expanded="true" />
-            <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13684#13685#0" expanded="true" />
-            <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#15303#15304#0" expanded="true" />
-            <element signature="e#15347#15348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="77" column="41" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="41" />
-          <folding>
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#6456#6492#0" expanded="true" />
-            <element signature="e#6970#7002#0" expanded="true" />
-            <element signature="e#7985#7986#0" expanded="true" />
-            <element signature="e#8012#8013#0" expanded="true" />
-            <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="374">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="191" column="13" lean-forward="false" selection-start-line="191" selection-start-column="13" selection-end-line="191" selection-end-column="13" />
+          <folding>
+            <element signature="class#LocationRequestTask#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
+            <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14198#14199#0" expanded="true" />
+            <element signature="e#14242#14243#0" expanded="true" />
+            <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="197" column="44" lean-forward="false" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
+          <folding>
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#9759#9760#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
+            <element signature="method#isNetworkAvailableAndConnected#0;class#SendLocationService#0" expanded="false" />
           </folding>
         </state>
       </provider>
