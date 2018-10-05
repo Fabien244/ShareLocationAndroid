@@ -2539,7 +2539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538726506501</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1538727057908</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1538727057908</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
