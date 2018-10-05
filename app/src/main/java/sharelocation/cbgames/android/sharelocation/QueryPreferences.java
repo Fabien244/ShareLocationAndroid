@@ -21,7 +21,7 @@ public class QueryPreferences {
     public static String getAuthHash(Context context){
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(PREF_AUTH_HASH, "");
-    }
+    }//
 
     public static void setAuthHash(Context context, String hash) {
         PreferenceManager.getDefaultSharedPreferences(context)
