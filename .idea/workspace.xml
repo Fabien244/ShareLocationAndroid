@@ -9,48 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_greenrobot_eventbus_3_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/DatePickerFragment.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/ShareLocationBaseHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/ShareLocationDbSchema.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_content_copy_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_info_outline_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_date.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/EnterFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/EnterFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MapFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MapFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/QueryPreferences.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/RequestTask.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareReceiver.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SplashActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_codes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_codes.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShareFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShareFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="176" column="136" lean-forward="false" selection-start-line="176" selection-start-column="136" selection-end-line="176" selection-end-column="136" />
+            <state relative-caret-position="272">
+              <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding>
                 <element signature="e#1971#2150#0" expanded="true" />
                 <element signature="e#2149#2150#0" expanded="true" />
@@ -109,9 +69,9 @@
                 <element signature="method#setTimeOverTextChange#0;class#ShareFragment#0" expanded="false" />
                 <element signature="e#5145#5187#0" expanded="true" />
                 <element signature="method#doInBackground#0;class#GenerateNewCodeRequestTask#0;class#ShareFragment#0" expanded="false" />
-                <element signature="e#8053#8054#0" expanded="true" />
-                <element signature="e#8104#8105#0" expanded="true" />
-                <element signature="e#9818#9843#0" expanded="true" />
+                <element signature="e#7916#7917#0" expanded="true" />
+                <element signature="e#7967#7968#0" expanded="true" />
+                <element signature="e#9681#9706#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,7 +80,7 @@
       <file leaf-file-name="MyInformation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="-1956">
               <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
                 <element signature="e#1334#1335#0" expanded="true" />
@@ -138,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCursorWrapper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserCursorWrapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -2265,9 +2225,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MapFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java" />
       </list>
     </option>
   </component>
@@ -2461,6 +2421,53 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="ShareLocationApp" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="ShareLocationApp" />
+      <envs />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2524,53 +2531,6 @@
       <envs />
       <patterns />
       <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="ShareLocationApp" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="ShareLocationApp" />
-      <envs />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <envs />
     </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -2688,12 +2648,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538782014968</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1539057759450</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1539057759450</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1539058970280</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539058970280</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3089,36 +3062,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="176" column="136" lean-forward="false" selection-start-line="176" selection-start-column="136" selection-end-line="176" selection-end-column="136" />
-          <folding>
-            <element signature="e#1971#2150#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2270#2726#0" expanded="true" />
-            <element signature="e#2725#2726#0" expanded="true" />
-            <element signature="e#2845#3333#0" expanded="true" />
-            <element signature="e#3260#3280#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3455#4124#0" expanded="true" />
-            <element signature="e#3594#3656#0" expanded="true" />
-            <element signature="e#3945#3981#0" expanded="true" />
-            <element signature="e#4028#4064#0" expanded="true" />
-            <element signature="e#4123#4124#0" expanded="true" />
-            <element signature="method#setTimeOverTextChange#0;class#ShareFragment#0" expanded="false" />
-            <element signature="e#5145#5187#0" expanded="true" />
-            <element signature="method#doInBackground#0;class#GenerateNewCodeRequestTask#0;class#ShareFragment#0" expanded="false" />
-            <element signature="e#8053#8054#0" expanded="true" />
-            <element signature="e#8104#8105#0" expanded="true" />
-            <element signature="e#9818#9843#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="-1956">
           <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
             <element signature="e#1334#1335#0" expanded="true" />
@@ -3135,11 +3089,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding />
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <element signature="e#1971#2150#0" expanded="true" />
+            <element signature="e#2149#2150#0" expanded="true" />
+            <element signature="e#2270#2726#0" expanded="true" />
+            <element signature="e#2725#2726#0" expanded="true" />
+            <element signature="e#2845#3333#0" expanded="true" />
+            <element signature="e#3260#3280#0" expanded="true" />
+            <element signature="e#3332#3333#0" expanded="true" />
+            <element signature="e#3455#4124#0" expanded="true" />
+            <element signature="e#3594#3656#0" expanded="true" />
+            <element signature="e#3945#3981#0" expanded="true" />
+            <element signature="e#4028#4064#0" expanded="true" />
+            <element signature="e#4123#4124#0" expanded="true" />
+            <element signature="method#setTimeOverTextChange#0;class#ShareFragment#0" expanded="false" />
+            <element signature="e#5145#5187#0" expanded="true" />
+            <element signature="method#doInBackground#0;class#GenerateNewCodeRequestTask#0;class#ShareFragment#0" expanded="false" />
+            <element signature="e#7916#7917#0" expanded="true" />
+            <element signature="e#7967#7968#0" expanded="true" />
+            <element signature="e#9681#9706#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
