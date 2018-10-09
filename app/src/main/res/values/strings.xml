@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">ShareLocation</string>
     <string name="title_activity_maps">Map</string>
-    <string name="distance_between">Расстояние между вами: %1$d м.</string>
     <string name="share_code">Поделиться местоположением</string>
     <string name="enter_code">Ввести код</string>
     <string name="settings">Настройка</string>
@@ -21,4 +20,10 @@
     <string name="checked_location">Идет отслеживание местоположения</string>
     <string name="enable_send_location">Отслеживать местоположение</string>
     <string name="stop">Приостановить отслеживание</string>
+    <string name="datetimeover">Ваш код истекает: %1$s</string>
+    <string name="select_timeover">Выбрать дату истечения</string>
+    <string name="share_description">Поделившись данным кодом, ваши друзья смогут наблюдать за вашим местоположением в реальном времени.</string>
+    <string name="code_copied">Код скопирован</string>
+    <string name="share_sharecode_description">Отследи моё местоположение, скачав приложение "ShareLocation" и введя код:</string>
+    <string name="timeover_changed">Дата истечения изменена</string>
 </resources>

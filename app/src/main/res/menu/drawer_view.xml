@@ -3,10 +3,11 @@
       xmlns:android="http://schemas.android.com/apk/res/android" >
     <group android:title="@string/action">
 
-        <item android:id="@+id/checked_location_item"
-              android:icon="?attr/actionModeShareDrawable"
-              android:title="@string/enable_send_location"
-              app:actionLayout="@layout/menu_switch"/>
+        <item
+            android:id="@+id/checked_location_item"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/enable_send_location"
+            app:actionLayout="@layout/menu_switch"/>
 
         <item
             android:id="@+id/nav_share_code"

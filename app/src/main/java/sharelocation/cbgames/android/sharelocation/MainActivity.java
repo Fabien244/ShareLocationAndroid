@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_LOCATION_PERMISSIONS = 0;
     private GoogleApiClient mClient;
     private Location mLocation;
-    private boolean isCheckedLocation = false;
+    private boolean isCheckedLocation = true;
 
     private DrawerLayout mDrawerLayout;
 
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = (TextView) headerView.findViewById(R.id.username_text);
-        navUsername.setText(MyInformation.get(this).getUser(0).getUserName());
+        navUsername.setText(MyInformation.get(this).getUser("0").getUserName());
 
         checkedLocationSwitch = (Switch) navigationView.getMenu().getItem(0).getActionView().findViewById(R.id.checked_location);
         checkedLocationSwitch.setOnClickListener(new View.OnClickListener() {
@@ -205,8 +205,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void sendLocation(Location location){
-        MyInformation.get(this).getUser(0).setLocation(location);
+    public void sendLocation(LatLng location){
+        MyInformation.get(this).getUser("").setLocation(location);
         new LocationRequestTask(location).execute();
     }
 
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onLocationChanged(Location location) {
                         mLocation = location;
-                        sendLocation(mLocation);
+                        sendLocation(new LatLng(mLocation.getLatitude(), mLocation.getLongitude()));
                         Log.d(TAG, "location sended");
                     }
                 });
@@ -323,16 +323,16 @@ public class MainActivity extends AppCompatActivity {
     class LocationRequestTask extends AsyncTask<String, String, String> {
 
         private static final String TAG = "LocationRequestTask";
-        private Location mLocation;
+        private LatLng mLocation;
 
-        public LocationRequestTask(Location location){
+        public LocationRequestTask(LatLng location){
             mLocation = location;
         }
 
         protected String doInBackground(String... urls) {
             try {
-                String hash = MyInformation.get(getBaseContext()).getUser(0).getAuthHash();
-                URL url = new URL("http://sharelocation.games-cb.com/index.php/app/sendLocation?hash="+hash+"&latitude="+mLocation.getLatitude()+"&longtitude="+mLocation.getLongitude());
+                String hash = QueryPreferences.getAuthHash(getBaseContext());
+                URL url = new URL("http://sharelocation.games-cb.com/index.php/app/sendLocation?hash="+hash+"&latitude="+mLocation.latitude+"&longtitude="+mLocation.longitude);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.setDoOutput(true);
@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
 
         protected String doInBackground(String... urls) {
             try {
-                String hash = MyInformation.get(getBaseContext()).getUser(0).getAuthHash();
+                String hash = QueryPreferences.getAuthHash(getBaseContext());
                 URL url = new URL("http://sharelocation.games-cb.com/index.php/app/sharecode?hash="+hash+"&newCode="+"0"+"&datetime="+"-1");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
@@ -412,7 +412,7 @@ public class MainActivity extends AppCompatActivity {
 
         protected String doInBackground(String... urls) {
             try {
-                String hash = MyInformation.get(getBaseContext()).getUser(0).getAuthHash();
+                String hash = QueryPreferences.getAuthHash(getBaseContext());
                 URL url = new URL("http://sharelocation.games-cb.com/index.php/app/PermissionList?share_codes_json={\"share_codes\":["+mJsonData+"]}");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
@@ -449,7 +449,12 @@ public class MainActivity extends AppCompatActivity {
                         Double lon = jsonResult.getJSONObject(i+"").getDouble("longitude");
                         MyInformation.InformationUser.StatusCode statusCode = MyInformation.InformationUser.StatusCode.valueOf(jsonResult.getJSONObject(i+"").getString("statuscode"));
 
-                        MyInformation.get(getBaseContext()).updateUser(code, statusCode, username, lat, lon);
+                        MyInformation.InformationUser user = new MyInformation.InformationUser();
+                        user.setCode(code);
+                        user.setStatusCode(statusCode);
+                        user.setUserName(username);
+                        user.setLocation(new LatLng(lat, lon));
+                        MyInformation.get(getBaseContext()).updateUser(user);
 
                         if (statusCode == MyInformation.InformationUser.StatusCode.NOT_AVAILABLE || statusCode == MyInformation.InformationUser.StatusCode.OFFLINE) {
                             Log.d(TAG, "Code "+statusCode.name());

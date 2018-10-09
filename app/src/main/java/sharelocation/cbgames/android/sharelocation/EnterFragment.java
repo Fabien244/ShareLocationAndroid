@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -145,12 +147,19 @@ public class EnterFragment extends Fragment {
                     }
 
                     if (available) {
-                        if(!jsonResult.getString("sharecode").toLowerCase().equals(MyInformation.get(getContext()).getUser(0).getCode().toLowerCase())) {
+                        String code = jsonResult.getString("sharecode");
+                        if(!code.toLowerCase().equals(MyInformation.get(getContext()).getUser("0").getCode().toLowerCase())) {
                             String username = jsonResult.getString("username");
-                            String code = jsonResult.getString("sharecode");
                             Double lat = jsonResult.getDouble("latitude");
                             Double lon = jsonResult.getDouble("longitude");
-                            MyInformation.get(getContext()).updateUser(code, statusCode, username, lat, lon);
+
+                            MyInformation.InformationUser user = new MyInformation.InformationUser();
+                            user.setCode(code);
+                            user.setStatusCode(statusCode);
+                            user.setUserName(username);
+                            user.setLocation(new LatLng(lat, lon));
+                            MyInformation.get(getContext()).addUser(user);
+
 
                             android.support.v4.app.FragmentTransaction tran = getFragmentManager().beginTransaction();
                             tran.replace(R.id.fragment_container, new MapFragment());

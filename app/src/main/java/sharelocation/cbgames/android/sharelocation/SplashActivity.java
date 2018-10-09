@@ -75,14 +75,14 @@ public class SplashActivity extends AppCompatActivity  {
                 Log.d(TAG, result);
                 if (jsonResult.getString("action").equals("auth")) {
                     if (jsonResult.getBoolean("isAuth")) {
-                        MyInformation.get(getBaseContext()).getUser(0).setAuthHash(jsonResult.getString("hash"));
-                        MyInformation.get(getBaseContext()).getUser(0).setUserName(jsonResult.getString("username"));
-                        MyInformation.get(getBaseContext()).getUser(0).setCode(jsonResult.getString("sharecode"));
+                        MyInformation.InformationUser user = new MyInformation.InformationUser();
+                        user.setCode(jsonResult.getString("sharecode"));
+                        user.setUserName(jsonResult.getString("username"));
+                        MyInformation.get(getBaseContext()).addUser(user);
 
-                        SharedPreferences sPref = getSharedPreferences(AUTH_HASH_CODE, MODE_PRIVATE);
-                        SharedPreferences.Editor ed = sPref.edit();
-                        ed.putString("hash", jsonResult.getString("hash"));
-                        ed.commit();
+                        QueryPreferences.setAuthHash(getBaseContext(), jsonResult.getString("hash"));
+                        QueryPreferences.setShareCode(getBaseContext(), jsonResult.getString("sharecode"));
+                        QueryPreferences.setTimeOverCode(getBaseContext(), jsonResult.getLong("datetime_over"));
 
                         Log.d(TAG, "Login Successful!");
                         openPage();

@@ -22,20 +22,32 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import org.json.JSONObject;
 
@@ -49,17 +61,14 @@ import java.util.concurrent.TimeUnit;
 import static android.app.Notification.EXTRA_NOTIFICATION_ID;
 import static android.support.v4.app.NotificationCompat.DEFAULT_SOUND;
 import static android.support.v4.app.NotificationCompat.DEFAULT_VIBRATE;
+import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
 public class SendLocationService extends Service {
 
-
-    public static final String ACTION_SHOW_NOTIFICATION =
-            "sharelocation.cbgames.android.sharelocation.SHOW_NOTIFICATION";
     private static final String TAG = "SendLocationService";
-    final String AUTH_HASH_CODE = "MyInformation";
 
     private GoogleApiClient mClient;
-    private Location mLocation;
+    private LocationRequest mLocationRequest;
 
     // 60 секунд
     private static final long POLL_INTERVAL_MS = TimeUnit.MINUTES.toMillis(1);
@@ -69,81 +78,105 @@ public class SendLocationService extends Service {
     }
 
 
+    FusedLocationProviderClient mFusedLocationClient;
     @Override
     public void onCreate() {
         super.onCreate();
     }
 
     @SuppressLint("MissingPermission")
-    private void reconnectGoogleApiClient() {
-        mClient = new GoogleApiClient.Builder(this)
-                .addApi(LocationServices.API)
-                .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
-                    @Override
-                    public void onConnected(Bundle bundle) {
-                        Log.d(TAG, "GoogleApi connected");
-                        findLocation();
-                    }
+    protected void startLocationUpdates() {
 
+        if(mFusedLocationClient == null)
+            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        Log.d(TAG, "search location");
+
+        // Create the location request to start receiving updates
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        //mLocationRequest.setInterval(UPDATE_INTERVAL);
+        //mLocationRequest.setFastestInterval(FASTEST_INTERVAL);
+
+        // Create LocationSettingsRequest object using location request
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder();
+        builder.addLocationRequest(mLocationRequest);
+        LocationSettingsRequest locationSettingsRequest = builder.build();
+
+        // Check whether location settings are satisfied
+        // https://developers.google.com/android/reference/com/google/android/gms/location/SettingsClient
+        SettingsClient settingsClient = LocationServices.getSettingsClient(this);
+        settingsClient.checkLocationSettings(locationSettingsRequest);
+
+        // new Google API SDK v11 uses getFusedLocationProviderClient(this)
+        mFusedLocationClient.requestLocationUpdates(mLocationRequest, new LocationCallback() {
                     @Override
-                    public void onConnectionSuspended(int i) {
+                    public void onLocationResult(LocationResult locationResult) {
+                        // do work here
+                        onLocationChanged(locationResult.getLastLocation());
+                        //sendLocation(locationResult.getLastLocation());
+                    }
+                },
+                Looper.myLooper());
+    }
+
+    public void onLocationChanged(Location location) {
+        // New location has now been determined
+        //String msg = "Updated Location: " +
+        //        Double.toString(location.getLatitude()) + "," +
+        //        Double.toString(location.getLongitude());
+       // Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        // You can now create a LatLng Object for use with maps
+        //LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        sendLocation(location);
+    }
+
+    @SuppressLint("MissingPermission")
+    public void getLastLocation() {
+        // Get last known recent location using new Google Play Services SDK (v11+)
+        FusedLocationProviderClient locationClient = getFusedLocationProviderClient(this);
+
+        locationClient.getLastLocation()
+                .addOnSuccessListener(new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // GPS location can be null if GPS is switched off
+                        if (location != null) {
+                            onLocationChanged(location);
+                        }
                     }
                 })
-                .build();
-        mClient.connect();
-
-        mLocation = getLastKnownLocation();
-        MyInformation.get(this).getUser(0).setLocation(mLocation);
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("MapDemoActivity", "Error trying to get last GPS location");
+                        e.printStackTrace();
+                    }
+                });
     }
 
-    private Location getLastKnownLocation() {
-        LocationManager mLocationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-        List<String> providers = mLocationManager.getProviders(true);
-        Location bestLocation = null;
-        for (String provider : providers) {
-            @SuppressLint("MissingPermission") Location l = mLocationManager.getLastKnownLocation(provider);
-            if (l == null) {
-                continue;
-            }
-            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
-                // Found best last known location: %s", l);
-                bestLocation = l;
-            }
+    private boolean checkPermissions() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            requestPermissions();
+            return false;
         }
-        return bestLocation;
     }
 
-    private void findLocation() {
-        if (mClient != null && mClient.isConnected() && !mClient.isConnecting()) {
-            LocationRequest request = LocationRequest.create();
-            request.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            LocationServices.FusedLocationApi
-                    .requestLocationUpdates(mClient, request, new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-                            mLocation = location;
-                            sendLocation(mLocation);
-                            Log.d(TAG, "location sended");
-                        }
-                    });
-        }else{
-            reconnectGoogleApiClient();
-        }
+    private void requestPermissions() {
+        //ActivityCompat.requestPermissions(this,
+        //        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+        //        0);
     }
 
     public void sendLocation(Location location){
-        MyInformation.get(this).getUser(0).setLocation(location);
+        Log.d(TAG, "send location");
+        //QueryPreferences.setLastLocation(getBaseContext(), location);
+        MyInformation.InformationUser user = MyInformation.get(this).getUser("0");
+        user.setLocation(new LatLng(location.getLatitude(), location.getLongitude()));
+        MyInformation.get(getBaseContext()).updateUser(user);
         new LocationRequestTask(location).execute();
     }
 
@@ -154,7 +187,7 @@ public class SendLocationService extends Service {
                 context.getSystemService(Context.ALARM_SERVICE);
         if (isOn) {
             QueryPreferences.setCheckLocation(context, true);
-            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME,
+            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     SystemClock.elapsedRealtime(), POLL_INTERVAL_MS, pi);
 
 
@@ -163,7 +196,6 @@ public class SendLocationService extends Service {
 
             Resources resources = context.getResources();
 
-            Log.d(TAG, "onClick");
             Intent snoozeIntent = new Intent(context, ShareReceiver.class);
             snoozeIntent.setAction("stop_location");
             snoozeIntent.putExtra(EXTRA_NOTIFICATION_ID, 0);
@@ -231,13 +263,14 @@ public class SendLocationService extends Service {
         return START_STICKY;
     }
 
-
+    String actions = "locations";
     protected void onHandleIntent(Intent intent) {
         if (!isNetworkAvailableAndConnected()) {
             return;
         }
-        Log.i(TAG, "Received an intent: " + intent);
-        findLocation();
+        //Log.i(TAG, "Received an intent: " + intent);
+        //findLocation();
+        startLocationUpdates();
     }
 
     private boolean isNetworkAvailableAndConnected() {
@@ -261,8 +294,7 @@ public class SendLocationService extends Service {
 
         protected String doInBackground(String... urls) {
             try {
-                SharedPreferences sPref = getSharedPreferences(AUTH_HASH_CODE, MODE_PRIVATE);
-                String hash = sPref.getString("hash","");
+                String hash = QueryPreferences.getAuthHash(getBaseContext());
                 URL url = new URL("http://sharelocation.games-cb.com/index.php/app/sendLocation?hash="+hash+"&latitude="+mLocation.getLatitude()+"&longtitude="+mLocation.getLongitude());
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");

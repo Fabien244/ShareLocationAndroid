@@ -42,13 +42,18 @@ public class MapFragment extends SupportMapFragment {
     private GoogleMap mMap;
     boolean mStopHandler = false;
     Handler mHandler;
+    private boolean isMapLoaded = false;
 
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
             // do your stuff - don't create a new runnable here!
             if (!mStopHandler) {
-                mHandler.postDelayed(this, 1000);
+                if(MyInformation.get(getActivity().getBaseContext()).getUser("0").getLocation() == null || MyInformation.get(getActivity().getBaseContext()).getUser("0").getLocation().latitude == 0) {
+                    mHandler.postDelayed(this, 1000);
+                }else{
+                    mHandler.postDelayed(this, 40000);
+                }
                 updateUI();
             }
         }
@@ -85,9 +90,11 @@ public class MapFragment extends SupportMapFragment {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 mMap = googleMap;
-                //updateUI();
+                updateUI();
+                isMapLoaded = true;
             }
         });
+
 
         mHandler = new Handler();
         mHandler.post(runnable);
@@ -97,13 +104,16 @@ public class MapFragment extends SupportMapFragment {
         if (mMap == null){
             return;
         }
-        Location location = MyInformation.get(getActivity().getBaseContext()).getUser(0).getLocation();
+        LatLng location = MyInformation.get(getActivity().getBaseContext()).getUser("0").getLocation();
 
-        if(location == null) {
-            return;
-        }
-
+        int countPoints = 0;
         mMap.clear();
+
+        boolean myLocationEmpty = true;
+
+        if(location != null && location.latitude != 0){
+            myLocationEmpty = false;
+        }
 
         //Log.d(TAG, meterDistanceBetweenPoints(mLocation.getLatitude(), mLocation.getLongitude(), 48.484038, 135.077127)+"");
 /*
@@ -112,30 +122,53 @@ public class MapFragment extends SupportMapFragment {
                 .position(itemPoint)
                 .icon(itemBitmap);
 */
-        LatLng myPoint = new LatLng(location.getLatitude(), location.getLongitude());
-        MarkerOptions myMarker = new MarkerOptions()
-                .position(myPoint);
-        mMap.addMarker(myMarker);
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        LatLngBounds bounds;
+        LatLng myPoint = null;
+        LatLng otherPoint = null;
 
+        if(!myLocationEmpty) {
+            BitmapDescriptor itemBitmap = BitmapDescriptorFactory.fromResource(R.drawable.myicon);
+            myPoint = new LatLng(location.latitude, location.longitude);
+            MarkerOptions myMarker = new MarkerOptions()
+                    .position(myPoint)
+                    .icon(itemBitmap);
+            mMap.addMarker(myMarker);
+            countPoints++;
+            builder.include(myPoint);
+        }
         ArrayList<MyInformation.InformationUser> informUsers = MyInformation.get(getContext()).getUsers();
+        BitmapDescriptor itemBitmap = BitmapDescriptorFactory.fromResource(R.drawable.othericon);
         for(int i=1; i < informUsers.size(); i++){
-            Location loc = informUsers.get(i).getLocation();
-            LatLng otherPoint = new LatLng(loc.getLatitude(), loc.getLongitude());
+            LatLng loc = informUsers.get(i).getLocation();
+            otherPoint = new LatLng(loc.latitude, loc.longitude);
             MarkerOptions otherMarker = new MarkerOptions()
-                    .position(otherPoint);
+                    .position(otherPoint)
+                    .icon(itemBitmap);
             mMap.addMarker(otherMarker);
+            countPoints++;
+            builder.include(otherPoint);
         }
 
 
-/*
-        LatLngBounds bounds = new LatLngBounds.Builder()
-                .include(otherPoint)
-                .include(myPoint)
-                .build();
-                */
+        CameraUpdate update = null;
+
         int margin = getResources().getDimensionPixelSize(R.dimen.map_inset_margin);
-        //CameraUpdate update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
-        CameraUpdate update = CameraUpdateFactory.newLatLng(myPoint);
-        mMap.animateCamera(update);
+
+        if(countPoints == 1){
+            if(!myLocationEmpty){
+                builder.include(myPoint);
+            }else{
+                builder.include(otherPoint);
+            }
+            bounds = builder.build();
+            update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
+        }else{
+            bounds = builder.build();
+            update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
+        }
+
+        if(update != null && isMapLoaded == true)
+            mMap.animateCamera(update);
     }
 }

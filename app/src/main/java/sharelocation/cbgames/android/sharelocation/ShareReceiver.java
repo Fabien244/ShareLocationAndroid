@@ -4,8 +4,13 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.google.android.gms.location.LocationResult;
+
+import java.util.List;
 
 public class ShareReceiver extends BroadcastReceiver {
     private static final String TAG = "ShareReceiver";
@@ -21,6 +26,13 @@ public class ShareReceiver extends BroadcastReceiver {
                 break;
             case "android.intent.action.BOOT_COMPLETED":
                 SendLocationService.setServiceAlarm(context, true);
+                break;
+            case "locations":
+                LocationResult result = LocationResult.extractResult(intent);
+                if (result != null) {
+                    List<Location> locations = result.getLocations();
+                    Log.d(TAG, locations+"");
+                }
                 break;
         }
     }
