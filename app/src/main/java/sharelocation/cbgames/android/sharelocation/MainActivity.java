@@ -2,6 +2,7 @@ package sharelocation.cbgames.android.sharelocation;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.app.Notification;
@@ -34,9 +35,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RemoteViews;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -79,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
     private GoogleApiClient mClient;
     private Location mLocation;
     private boolean isCheckedLocation = true;
+    private TextView mNavUsername;
 
     private DrawerLayout mDrawerLayout;
 
@@ -115,8 +119,15 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         View headerView = navigationView.getHeaderView(0);
-        TextView navUsername = (TextView) headerView.findViewById(R.id.username_text);
-        navUsername.setText(MyInformation.get(this).getUser("0").getUserName());
+        mNavUsername = (TextView) headerView.findViewById(R.id.username_text);
+        mNavUsername.setText(MyInformation.get(this).getUser("0").getUserName());
+
+        mNavUsername.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAddItemDialog();
+            }
+        });
 
         checkedLocationSwitch = (Switch) navigationView.getMenu().getItem(0).getActionView().findViewById(R.id.checked_location);
         checkedLocationSwitch.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +183,26 @@ public class MainActivity extends AppCompatActivity {
 
         mHandler = new Handler();
         mHandler.post(runnable);
+    }
+
+    private void showAddItemDialog() {
+        final Context context = this;
+        final EditText taskEditText = new EditText(context);
+        taskEditText.setText(MyInformation.get(context).getUser("0").getUserName());
+        AlertDialog dialog = new AlertDialog.Builder(context)
+                .setTitle(R.string.title_changename)
+                .setMessage(R.string.desc_changename)
+                .setView(taskEditText)
+                .setPositiveButton(R.string.change, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String task = String.valueOf(taskEditText.getText());
+                        new ChangeUsernameRequestTask(task).execute();
+                    }
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .create();
+        dialog.show();
     }
 
 
@@ -460,6 +491,59 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "Code "+statusCode.name());
                         }
                     }
+                }
+            }catch (Exception e){
+                Log.e(TAG, e.toString());
+            }
+        }
+    }
+
+    class ChangeUsernameRequestTask extends AsyncTask<String, String, String> {
+
+        private static final String TAG = "LocationRequestTask";
+        private String mNewUsername;
+
+        public ChangeUsernameRequestTask(String newUserName){
+            mNewUsername = newUserName;
+        }
+
+        protected String doInBackground(String... urls) {
+            try {
+                String hash = QueryPreferences.getAuthHash(getBaseContext());
+                URL url = new URL("http://sharelocation.games-cb.com/index.php/app/UpdateUsername?hash="+hash+"&newname="+mNewUsername);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+                connection.setDoOutput(true);
+                connection.setConnectTimeout(5000);
+                connection.setReadTimeout(5000);
+                connection.connect();
+                BufferedReader rd = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String content = "", line;
+                while ((line = rd.readLine()) != null) {
+                    content += line + "\n";
+                }
+                return content;
+            }catch (Exception e){
+                Log.e(TAG, e.toString());
+            }
+            return null;
+        }
+
+        protected void onProgressUpdate(String... progress) {
+        }
+
+        protected void onPostExecute(String result) {
+            try {
+                JSONObject jsonResult = new JSONObject(result);
+                Log.d(TAG, "'" + jsonResult.get("action") + "' action request");
+                Log.d(TAG, result);
+                if (jsonResult.getString("action").equals("updateusername")) {
+                    String username = jsonResult.getString("username");
+                    Toast.makeText(getBaseContext(), String.format(getResources().getString(R.string.change_nick_to), username), Toast.LENGTH_SHORT).show();
+                    MyInformation.InformationUser user = MyInformation.get(getBaseContext()).getUser("0");
+                    user.setUserName(username);
+                    MyInformation.get(getBaseContext()).updateUser(user);
+                    mNavUsername.setText(MyInformation.get(getBaseContext()).getUser("0").getUserName());
                 }
             }catch (Exception e){
                 Log.e(TAG, e.toString());

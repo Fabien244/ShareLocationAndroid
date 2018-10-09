@@ -9,8 +9,18 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+    <list default="true" id="da7ce439-33cd-4847-9b58-2449fd61a130" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,77 +43,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fragment_share.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="143" column="40" lean-forward="false" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
-              <folding>
-                <element signature="e#4324#4351#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShareFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="545" column="103" lean-forward="false" selection-start-line="545" selection-start-column="103" selection-end-line="545" selection-end-column="103" />
               <folding>
-                <element signature="e#1971#2150#0" expanded="true" />
-                <element signature="e#2149#2150#0" expanded="true" />
-                <element signature="e#2270#2726#0" expanded="true" />
-                <element signature="e#2725#2726#0" expanded="true" />
-                <element signature="e#2845#3333#0" expanded="true" />
-                <element signature="e#3260#3280#0" expanded="true" />
-                <element signature="e#3332#3333#0" expanded="true" />
-                <element signature="e#3455#4124#0" expanded="true" />
-                <element signature="e#3594#3656#0" expanded="true" />
-                <element signature="e#3945#3981#0" expanded="true" />
-                <element signature="e#4028#4064#0" expanded="true" />
-                <element signature="e#4123#4124#0" expanded="true" />
-                <element signature="method#setTimeOverTextChange#0;class#ShareFragment#0" expanded="false" />
-                <element signature="e#5145#5187#0" expanded="true" />
-                <element signature="method#doInBackground#0;class#GenerateNewCodeRequestTask#0;class#ShareFragment#0" expanded="false" />
-                <element signature="e#7916#7917#0" expanded="true" />
-                <element signature="e#7967#7968#0" expanded="true" />
-                <element signature="e#9681#9706#0" expanded="true" />
+                <element signature="e#4509#4665#0" expanded="true" />
+                <element signature="e#4664#4665#0" expanded="true" />
+                <element signature="e#7427#7452#0" expanded="true" />
+                <element signature="e#7482#7506#0" expanded="true" />
+                <element signature="e#7582#7597#0" expanded="true" />
+                <element signature="e#7599#7934#0" expanded="true" />
+                <element signature="e#7933#7934#0" expanded="true" />
+                <element signature="e#7971#7986#0" expanded="true" />
+                <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#20369#20370#0" expanded="true" />
+                <element signature="e#20419#20420#0" expanded="true" />
+                <element signature="e#22011#22060#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1956">
-              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-              <folding>
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1370#1371#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#2424#2425#0" expanded="true" />
-                <element signature="e#2460#2461#0" expanded="true" />
-                <element signature="e#2504#2505#0" expanded="true" />
-                <element signature="e#2540#2541#0" expanded="true" />
-                <element signature="e#5288#5289#0" expanded="true" />
-                <element signature="e#5333#5334#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserCursorWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,18 +70,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnterFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/EnterFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="544">
+              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -2214,7 +2163,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/LocationBaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/ShareLocationDbSchema.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/ShareLocationBaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/EnterFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_codes.xml" />
@@ -2224,10 +2172,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/DatePickerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MapFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MyInformation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/UserCursorWrapper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2662,7 +2611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539058970280</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- Улучшен сервис по отправке геопозиции в фоне&#10;- Добавлена строка состояния отслеживания пользователя в статусбар&#10;- Добавлен скрипт обращения к preferences">
+      <created>1539059803089</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1539059803127</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2679,7 +2635,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37846836" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37846836" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2892,14 +2848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3609">
-          <caret line="182" column="55" lean-forward="false" selection-start-line="182" selection-start-column="55" selection-end-line="182" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/SendLocationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -3017,27 +2965,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="143" column="40" lean-forward="false" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
-          <folding>
-            <element signature="e#4324#4351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/database/ShareLocationBaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -3075,43 +3002,86 @@
         <state relative-caret-position="-1956">
           <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-            <element signature="e#2460#2461#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-            <element signature="e#2540#2541#0" expanded="true" />
-            <element signature="e#5288#5289#0" expanded="true" />
-            <element signature="e#5333#5334#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="false" />
+            <element signature="e#1370#1371#0" expanded="false" />
+            <element signature="e#1410#1411#0" expanded="false" />
+            <element signature="e#1446#1447#0" expanded="false" />
+            <element signature="e#2424#2425#0" expanded="false" />
+            <element signature="e#2460#2461#0" expanded="false" />
+            <element signature="e#2504#2505#0" expanded="false" />
+            <element signature="e#2540#2541#0" expanded="false" />
+            <element signature="e#5288#5289#0" expanded="false" />
+            <element signature="e#5333#5334#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/ShareFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="165" column="33" lean-forward="true" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
           <folding>
-            <element signature="e#1971#2150#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2270#2726#0" expanded="true" />
-            <element signature="e#2725#2726#0" expanded="true" />
-            <element signature="e#2845#3333#0" expanded="true" />
-            <element signature="e#3260#3280#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3455#4124#0" expanded="true" />
-            <element signature="e#3594#3656#0" expanded="true" />
-            <element signature="e#3945#3981#0" expanded="true" />
-            <element signature="e#4028#4064#0" expanded="true" />
-            <element signature="e#4123#4124#0" expanded="true" />
+            <element signature="e#1971#2150#0" expanded="false" />
+            <element signature="e#2149#2150#0" expanded="false" />
+            <element signature="e#2270#2726#0" expanded="false" />
+            <element signature="e#2725#2726#0" expanded="false" />
+            <element signature="e#2845#3333#0" expanded="false" />
+            <element signature="e#3260#3280#0" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3455#4124#0" expanded="false" />
+            <element signature="e#3594#3656#0" expanded="false" />
+            <element signature="e#3945#3981#0" expanded="false" />
+            <element signature="e#4028#4064#0" expanded="false" />
+            <element signature="e#4123#4124#0" expanded="false" />
             <element signature="method#setTimeOverTextChange#0;class#ShareFragment#0" expanded="false" />
-            <element signature="e#5145#5187#0" expanded="true" />
+            <element signature="e#5145#5187#0" expanded="false" />
             <element signature="method#doInBackground#0;class#GenerateNewCodeRequestTask#0;class#ShareFragment#0" expanded="false" />
-            <element signature="e#7916#7917#0" expanded="true" />
-            <element signature="e#7967#7968#0" expanded="true" />
-            <element signature="e#9681#9706#0" expanded="true" />
+            <element signature="e#7916#7917#0" expanded="false" />
+            <element signature="e#7967#7968#0" expanded="false" />
+            <element signature="e#9681#9706#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="143" column="40" lean-forward="false" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
+          <folding>
+            <element signature="e#4324#4351#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sharelocation/cbgames/android/sharelocation/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="545" column="103" lean-forward="false" selection-start-line="545" selection-start-column="103" selection-end-line="545" selection-end-column="103" />
+          <folding>
+            <element signature="e#4509#4665#0" expanded="true" />
+            <element signature="e#4664#4665#0" expanded="true" />
+            <element signature="e#7427#7452#0" expanded="true" />
+            <element signature="e#7482#7506#0" expanded="true" />
+            <element signature="e#7582#7597#0" expanded="true" />
+            <element signature="e#7599#7934#0" expanded="true" />
+            <element signature="e#7933#7934#0" expanded="true" />
+            <element signature="e#7971#7986#0" expanded="true" />
+            <element signature="class#ShareCodeRequestTask#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#GetAllCodesRequestTask#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#20369#20370#0" expanded="true" />
+            <element signature="e#20419#20420#0" expanded="true" />
+            <element signature="e#22011#22060#0" expanded="true" />
           </folding>
         </state>
       </provider>

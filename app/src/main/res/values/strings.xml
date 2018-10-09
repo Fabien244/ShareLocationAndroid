@@ -26,4 +26,9 @@
     <string name="code_copied">Код скопирован</string>
     <string name="share_sharecode_description">Отследи моё местоположение, скачав приложение "ShareLocation" и введя код:</string>
     <string name="timeover_changed">Дата истечения изменена</string>
+    <string name="title_changename">Смена ника</string>
+    <string name="desc_changename">Введите желаемый ник</string>
+    <string name="change">Изменить</string>
+    <string name="cancel">Отмена</string>
+    <string name="change_nick_to">Ник изменен на %1$s</string>
 </resources>
