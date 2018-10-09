@@ -174,7 +174,6 @@ public class ShareFragment extends Fragment{
                 if (jsonResult.getString("action").equals("sharecode")) {
                     String shareCode = jsonResult.getString("share_code");
 
-                    Log.d(TAG, "result: "+MyInformation.get(getContext()).getUser(QueryPreferences.getShareCode(getContext())).getId());
                     MyInformation.InformationUser user = MyInformation.get(getContext()).getUser(QueryPreferences.getShareCode(getContext()));
                     user.setCode(shareCode);
                     MyInformation.get(getContext()).updateUser(user, true);
