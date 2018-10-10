@@ -5,9 +5,14 @@
 
         <item
             android:id="@+id/checked_location_item"
-            android:icon="@android:drawable/ic_dialog_map"
+            android:icon="@android:drawable/ic_menu_mylocation"
             android:title="@string/enable_send_location"
             app:actionLayout="@layout/menu_switch"/>
+
+        <item
+            android:id="@+id/open_map"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/map"/>
 
         <item
             android:id="@+id/nav_share_code"

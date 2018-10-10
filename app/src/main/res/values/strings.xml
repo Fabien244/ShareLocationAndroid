@@ -31,4 +31,5 @@
     <string name="change">Изменить</string>
     <string name="cancel">Отмена</string>
     <string name="change_nick_to">Ник изменен на %1$s</string>
+    <string name="map">Карта</string>
 </resources>

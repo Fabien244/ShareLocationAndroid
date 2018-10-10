@@ -78,7 +78,7 @@ public class EnterFragment extends Fragment {
         ArrayList<MyInformation.InformationUser> informationUsersOriginal = MyInformation.get(getContext()).getUsers();
         ArrayList<MyInformation.InformationUser> informationUsersCopy = new ArrayList<MyInformation.InformationUser>();
 
-        for(int i=1; i<informationUsersOriginal.size(); i++){
+        for(int i=0; i<informationUsersOriginal.size(); i++){
             informationUsersCopy.add(informationUsersOriginal.get(i));
         }
 

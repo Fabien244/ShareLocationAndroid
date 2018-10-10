@@ -139,7 +139,7 @@ public class MapFragment extends SupportMapFragment {
         }
         ArrayList<MyInformation.InformationUser> informUsers = MyInformation.get(getContext()).getUsers();
         BitmapDescriptor itemBitmap = BitmapDescriptorFactory.fromResource(R.drawable.othericon);
-        for(int i=1; i < informUsers.size(); i++){
+        for(int i=0; i < informUsers.size(); i++){
             LatLng loc = informUsers.get(i).getLocation();
             otherPoint = new LatLng(loc.latitude, loc.longitude);
             MarkerOptions otherMarker = new MarkerOptions()
@@ -163,7 +163,7 @@ public class MapFragment extends SupportMapFragment {
             }
             bounds = builder.build();
             update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
-        }else{
+        }else if(countPoints != 0){
             bounds = builder.build();
             update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
         }

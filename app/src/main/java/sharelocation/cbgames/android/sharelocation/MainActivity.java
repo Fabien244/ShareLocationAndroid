@@ -36,6 +36,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-        //actionbar.setHomeAsUpIndicator(R.drawable);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -129,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        checkedLocationSwitch = (Switch) navigationView.getMenu().getItem(0).getActionView().findViewById(R.id.checked_location);
+
+                checkedLocationSwitch = (Switch) navigationView.getMenu().getItem(0).getActionView().findViewById(R.id.checked_location);
         checkedLocationSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,6 +149,10 @@ public class MainActivity extends AppCompatActivity {
                         switch (id){
                             case R.id.checked_location_item:
                                 checkedLocation(true);
+                                break;
+                            case R.id.open_map:
+                                tran.replace(R.id.fragment_container, new MapFragment());
+                                tran.commit();
                                 break;
                             case R.id.nav_share_code:
                                 tran.replace(R.id.fragment_container, new ShareFragment());
@@ -309,8 +315,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        finish();
+        /*
         int count = getSupportFragmentManager().getBackStackEntryCount();
-
         if (count == 0) {
             android.support.v4.app.FragmentTransaction tran = getSupportFragmentManager().beginTransaction();
             tran.replace(R.id.fragment_container, new MapFragment());
@@ -318,6 +325,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             getFragmentManager().popBackStack();
         }
+        */
     }
 
 
@@ -341,11 +349,12 @@ public class MainActivity extends AppCompatActivity {
         String jsonData = "";
 
         ArrayList<MyInformation.InformationUser> informUsers = MyInformation.get(getBaseContext()).getUsers();
-        for(int i=1; i<informUsers.size(); i++){
-            if(i == 1)
-                jsonData = "\""+informUsers.get(i).getCode()+"\"";
-            else
-                jsonData += ",\""+informUsers.get(i).getCode()+"\"";
+
+        if(informUsers.size() >= 2)
+            jsonData = "\""+informUsers.get(1).getCode()+"\"";
+
+        for(int i=2; i<informUsers.size(); i++){
+            jsonData += ",\""+informUsers.get(i).getCode()+"\"";
         }
         if(informUsers.size() > 1)
             new GetAllCodesRequestTask(jsonData).execute();

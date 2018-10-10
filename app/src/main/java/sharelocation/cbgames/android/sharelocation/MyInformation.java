@@ -158,6 +158,7 @@ public class MyInformation {
     public void addUser(InformationUser informUser){
         ContentValues values = getContentValues(informUser);
         if(getUser(informUser.getCode()) == null) {
+            informUser.setId(UUID.randomUUID());
             mDatabase.insert(UserTable.NAME, null, values);
         }else{
             mDatabase.update(UserTable.NAME, values,
