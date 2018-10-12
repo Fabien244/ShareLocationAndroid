@@ -22,6 +22,12 @@ public class QueryPreferences {
                 .apply();
     }
 
+
+    public static String getAppPasswrd(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(PREF_APP_PASSWORD, "");
+    }
+
     public static boolean isCheckLocation(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(PREF_CHECK_LOCATION, true);

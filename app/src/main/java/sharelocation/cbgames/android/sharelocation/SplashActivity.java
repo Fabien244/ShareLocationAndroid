@@ -10,6 +10,11 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -22,9 +27,62 @@ import java.util.concurrent.ExecutionException;
 
 public class SplashActivity extends AppCompatActivity  {
 
+    private EditText mPasswordText;
+    private String password = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(QueryPreferences.getAppPasswrd(getBaseContext()).length() > 3) {
+            setContentView(R.layout.activity_password);
+
+            mPasswordText = (EditText) findViewById(R.id.password_text);
+
+            for (int i = 0; i < 10; i++) {
+                int resID = getResources().getIdentifier("btn" + i, "id", getPackageName());
+                Button btnNum = (Button) findViewById(resID);
+                final int finalI = i;
+                btnNum.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        int b = finalI;
+                        selectNum(b);
+                    }
+                });
+            }
+
+            Button btnClear = (Button) findViewById(R.id.btnClear);
+            btnClear.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    password = "";
+                    mPasswordText.setText("");
+                }
+            });
+
+            Button BtnOk = (Button) findViewById(R.id.btnOk);
+            BtnOk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (QueryPreferences.getAppPasswrd(getBaseContext()).equals(password)) {
+                        auth();
+                    } else {
+                        Toast.makeText(getBaseContext(), R.string.password_incorrect, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }else{
+            auth();
+        }
+    }
+
+    private void selectNum(int num){
+        password += num;
+        mPasswordText.setText(password);
+    }
+
+    private void auth(){
         String deviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID).toString();
         new AuthTask().execute("http://sharelocation.games-cb.com/index.php/app/auth?device_id="+ deviceId);
     }

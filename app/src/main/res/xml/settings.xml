@@ -16,5 +16,6 @@
         android:key="app_password"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="@string/app_password"/>
+        android:title="@string/app_password"
+        android:summary="@string/app_password_desc"/>
 </PreferenceScreen>

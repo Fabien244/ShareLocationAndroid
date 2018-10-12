@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -43,7 +44,16 @@ public class MyPreferenceFragment extends PreferenceFragmentCompat implements Sh
                 break;
             case "app_password":
                 //String pass = md5(prefs.getString("app_password", "12345"));
-                QueryPreferences.setAppPasswrd(mContext, prefs.getString("app_password", "12345"));
+                String pass = prefs.getString("app_password", "12345");
+                if(pass.length() <= 1) {
+                    QueryPreferences.setAppPasswrd(mContext, "");
+                }else {
+                    if (pass.length() > 3) {
+                        QueryPreferences.setAppPasswrd(mContext, pass);
+                    } else {
+                        Toast.makeText(mContext, R.string.pass_length_error, Toast.LENGTH_SHORT).show();
+                    }
+                }
                 break;
         }
     }

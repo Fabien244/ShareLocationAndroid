@@ -35,5 +35,9 @@
     <string name="enable_notification">Уведомление в шторке</string>
     <string name="enable_notification_desc">Отображается при отслеживании местоположения</string>
     <string name="app_password">Установить пароль на приложение</string>
+    <string name="app_password_desc">Оставьте поле пустым чтобы удалить пароль</string>
     <string name="hide">Скрыть</string>
+    <string name="enter_app_password">Введите пароль от приложения</string>
+    <string name="password_incorrect">Пароль не верный</string>
+    <string name="pass_length_error">Длинна пароля не может быть меньше 4 символов</string>
 </resources>
