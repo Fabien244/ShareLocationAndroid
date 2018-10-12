@@ -42,7 +42,7 @@ public class MapFragment extends SupportMapFragment {
     private GoogleMap mMap;
     boolean mStopHandler = false;
     Handler mHandler;
-    private boolean isMapLoaded = false;
+    private boolean isMapReady = false;
 
     Runnable runnable = new Runnable() {
         @Override
@@ -63,6 +63,7 @@ public class MapFragment extends SupportMapFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         mStopHandler = false;
+        updateUI();
     }
 
     @Override
@@ -81,6 +82,7 @@ public class MapFragment extends SupportMapFragment {
     public void onResume(){
         super.onResume();
         mStopHandler = false;
+        updateUI();
     }
 
     @Override
@@ -91,7 +93,7 @@ public class MapFragment extends SupportMapFragment {
             public void onMapReady(GoogleMap googleMap) {
                 mMap = googleMap;
                 updateUI();
-                isMapLoaded = true;
+                isMapReady = true;
             }
         });
 
@@ -104,6 +106,7 @@ public class MapFragment extends SupportMapFragment {
         if (mMap == null){
             return;
         }
+
         LatLng location = MyInformation.get(getActivity().getBaseContext()).getUser("0").getLocation();
 
         int countPoints = 0;
@@ -168,7 +171,9 @@ public class MapFragment extends SupportMapFragment {
             update = CameraUpdateFactory.newLatLngBounds(bounds, margin);
         }
 
-        if(update != null && isMapLoaded == true)
+        if(update != null && isMapReady && mMap != null) {
+            MyInformation.get(getContext()).setLastUpdateCamera(update);
             mMap.animateCamera(update);
+        }
     }
 }

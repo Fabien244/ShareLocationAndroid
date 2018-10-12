@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="internalOnly"
           package="sharelocation.cbgames.android.sharelocation">
 
     <!--
@@ -15,6 +16,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.QUICKBOOT_POWERON" />
 
     <application
         android:allowBackup="true"
@@ -33,9 +35,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name=".SendLocationService" />
 
-        <receiver android:name=".ShareReceiver" android:exported="true">
+
+        <service android:name=".SendLocationService"/>
+
+        <receiver
+            android:name=".ShareReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>

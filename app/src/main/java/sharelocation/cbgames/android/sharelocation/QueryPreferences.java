@@ -12,6 +12,15 @@ public class QueryPreferences {
     private static final String PREF_CHECK_LOCATION = "checked_location";
     private static final String PREF_SHARECODE = "sharecode";
     private static final String PREF_TIMEOVER_CODE = "timeover_code";
+    private static final String PREF_APP_PASSWORD = "app_password";
+    private static final String PREF_NOTIFICATION = "notification";
+
+    public static void setAppPasswrd(Context context, String password){
+        PreferenceManager.getDefaultSharedPreferences(context)
+                .edit()
+                .putString(PREF_APP_PASSWORD, password)
+                .apply();
+    }
 
     public static boolean isCheckLocation(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
@@ -58,6 +67,19 @@ public class QueryPreferences {
         PreferenceManager.getDefaultSharedPreferences(context)
                 .edit()
                 .putLong(PREF_TIMEOVER_CODE, timeover_code)
+                .apply();
+    }
+
+
+    public static boolean getNotification(Context context){
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(PREF_NOTIFICATION, true);
+    }
+
+    public static void setNotification(Context context, boolean isOn){
+        PreferenceManager.getDefaultSharedPreferences(context)
+                .edit()
+                .putBoolean(PREF_NOTIFICATION, isOn)
                 .apply();
     }
 

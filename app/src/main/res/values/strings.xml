@@ -32,4 +32,8 @@
     <string name="cancel">Отмена</string>
     <string name="change_nick_to">Ник изменен на %1$s</string>
     <string name="map">Карта</string>
+    <string name="enable_notification">Уведомление в шторке</string>
+    <string name="enable_notification_desc">Отображается при отслеживании местоположения</string>
+    <string name="app_password">Установить пароль на приложение</string>
+    <string name="hide">Скрыть</string>
 </resources>

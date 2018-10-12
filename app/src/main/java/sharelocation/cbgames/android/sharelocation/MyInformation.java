@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.util.Log;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -29,6 +30,15 @@ public class MyInformation {
     private Context mContext;
     private SQLiteDatabase mDatabase;
     private UUID mMyId;
+    private CameraUpdate lastUpdateCamera;
+
+    public CameraUpdate getLastUpdateCamera() {
+        return lastUpdateCamera;
+    }
+
+    public void setLastUpdateCamera(CameraUpdate lastUpdateCamera) {
+        this.lastUpdateCamera = lastUpdateCamera;
+    }
 
     public static class InformationUser{
         public StatusCode getStatusCode() {

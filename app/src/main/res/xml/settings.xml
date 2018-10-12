@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:visibility="invisible"
+        android:defaultValue="true"
+        android:key="wifi"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="notification"
+        android:summary="@string/enable_notification_desc"
+        android:title="@string/enable_notification"/>
+    <EditTextPreference
+        android:defaultValue="12345"
+        android:key="app_password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/app_password"/>
+</PreferenceScreen>

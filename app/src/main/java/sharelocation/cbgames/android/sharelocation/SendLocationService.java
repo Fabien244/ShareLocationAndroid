@@ -82,6 +82,7 @@ public class SendLocationService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        getLastLocation();
     }
 
     @SuppressLint("MissingPermission")
@@ -189,59 +190,13 @@ public class SendLocationService extends Service {
             QueryPreferences.setCheckLocation(context, true);
             alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     SystemClock.elapsedRealtime(), POLL_INTERVAL_MS, pi);
-
-
-            RemoteViews notificationLayout = new RemoteViews("sharelocation.cbgames.android.sharelocation", R.layout.notification_small);
-            RemoteViews notificationLayoutExpanded = new RemoteViews("sharelocation.cbgames.android.sharelocation", R.layout.notification_large);
-
-            Resources resources = context.getResources();
-
-            Intent snoozeIntent = new Intent(context, ShareReceiver.class);
-            snoozeIntent.setAction("stop_location");
-            snoozeIntent.putExtra(EXTRA_NOTIFICATION_ID, 0);
-            PendingIntent snoozePendingIntent =
-                    PendingIntent.getBroadcast(context, 0, snoozeIntent, 0);
-
-            Intent intent = new Intent(context, MainActivity.class);
-            PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent, 0);
-
-            NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                NotificationChannel notificationChannel = new NotificationChannel("0", "My Notifications", NotificationManager.IMPORTANCE_DEFAULT);
-
-                // Configure the notification channel.
-                notificationChannel.setDescription("Channel description");
-                notificationChannel.enableLights(true);
-                notificationChannel.setLightColor(Color.RED);
-                notificationChannel.setVibrationPattern(new long[]{0, 1000, 500, 1000});
-                notificationChannel.enableVibration(true);
-                notificationManager.createNotificationChannel(notificationChannel);
-            }
-
-            Notification notification = new NotificationCompat.Builder(context, "0")
-                    .setTicker(resources.getString(R.string.online))
-                    .setSmallIcon(android.R.drawable.ic_dialog_map)
-                    .setContentIntent(pIntent)
-                    .setAutoCancel(false)
-                    .setOngoing(true)
-                    .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                    .setCustomContentView(notificationLayout)
-                    .setCustomBigContentView(notificationLayoutExpanded)
-                    .addAction(android.R.drawable.ic_dialog_map, context.getString(R.string.stop), snoozePendingIntent)
-                    .setDefaults(0)
-                    .build();
-            //NotificationManagerCompat notificationManager =
-                    //NotificationManagerCompat.from(context);
-            notificationManager.notify(0, notification);
-            //context.sendBroadcast(new Intent(ACTION_SHOW_NOTIFICATION));
-
         } else {
-            NotificationManager mNotificationManager = (NotificationManager)  context.getSystemService(Context.NOTIFICATION_SERVICE);
-            mNotificationManager.cancel(0);
             QueryPreferences.setCheckLocation(context, false);
             alarmManager.cancel(pi);
             pi.cancel();
         }
+
+        AppNotification.ShowPermanent(context, isOn);
     }
 
     public static boolean isServiceAlarmOn(Context context) {

@@ -163,6 +163,8 @@ public class MainActivity extends AppCompatActivity {
                                 tran.commit();
                                 break;
                             case R.id.nav_settings:
+                                tran.replace(R.id.fragment_container, new MyPreferenceFragment());
+                                tran.commit();
                                 break;
                         }
                         // set item as selected to persist highlight
